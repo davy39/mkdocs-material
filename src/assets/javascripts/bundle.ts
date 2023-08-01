@@ -165,7 +165,7 @@ merge(location$, target$)
       setToggle("search", false)
     })
 
-/* Set up global keyboard handlers */
+/* Set up global keyboard handlers
 keyboard$
   .pipe(
     filter(({ mode }) => mode === "global")
@@ -173,7 +173,7 @@ keyboard$
     .subscribe(key => {
       switch (key.type) {
 
-        /* Go to previous page */
+        /* Go to previous page
         case "p":
         case ",":
           const prev = getOptionalElement<HTMLLinkElement>("link[rel=prev]")
@@ -181,7 +181,7 @@ keyboard$
             setLocation(prev)
           break
 
-        /* Go to next page */
+        /* Go to next page
         case "n":
         case ".":
           const next = getOptionalElement<HTMLLinkElement>("link[rel=next]")
@@ -189,13 +189,14 @@ keyboard$
             setLocation(next)
           break
 
-        /* Expand navigation, see https://bit.ly/3ZjG5io */
+        /* Expand navigation, see https://bit.ly/3ZjG5io 
         case "Enter":
           const active = getActiveElement()
           if (active instanceof HTMLLabelElement)
             active.click()
       }
     })
+*/
 
 /* Set up patches */
 patchIndeterminate({ document$, tablet$ })
