@@ -191,7 +191,7 @@ export function mountSearch(
           }
         })
 
-    /* Set up global keyboard handlers */
+    /* Set up global keyboard handlers 
     keyboard$
       .pipe(
         filter(({ mode }) => mode === "global")
@@ -199,19 +199,19 @@ export function mountSearch(
         .subscribe(key => {
           switch (key.type) {
 
-            /* Open search and select query */
+            /* Open search and select query 
             case "f":
             case "s":
             case "/":
               query.focus()
               query.select()
 
-              /* Prevent scrolling of page */
+              /* Prevent scrolling of page 
               key.claim()
               break
           }
         })
-
+    */
     /* Create and return component */
     const query$ = mountSearchQuery(query, { worker$ })
     return merge(
